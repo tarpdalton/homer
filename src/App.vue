@@ -37,6 +37,14 @@
           iconAlt="fa-columns"
         />
 
+        <a
+          onclick="location.reload(true)"
+          class="navbar-item is-inline-block-mobile"
+        >
+          <span><i :class="['fas', 'fa-fw', 'fa-redo']"></i></span>
+          <slot></slot>
+        </a>
+
         <SearchInput
           class="navbar-item is-inline-block-mobile"
           @input="filterServices"
@@ -144,6 +152,7 @@ export default {
       offline: false,
       filter: "",
       vlayout: true,
+      reload: null,
       isDark: null,
       showMenu: false,
     };
